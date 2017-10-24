@@ -5,6 +5,7 @@
 
 # Misc
 brew install macvim tmux ack git openssl wget heroku/brew/heroku nmap htop
+brew cask install insomnia
 
 # Storage
 brew install postgres pgcli redis
