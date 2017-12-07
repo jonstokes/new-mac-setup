@@ -12,6 +12,7 @@ brew install postgres pgcli redis
 
 # Javascript
 brew install node yarn watchman
+npm -g install babel-cli create-react-app
 
 # ZSH and oh-my-zsh
 brew install zsh zsh-completions
@@ -35,4 +36,4 @@ brew install docker docker-machine
 docker-machine create main
 eval $(docker-machine env main)
 
-npm install -g aws-sam-local
+npm install -g aws-sam-local serverless
