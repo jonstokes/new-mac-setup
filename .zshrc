@@ -58,6 +58,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
+eval $(docker-machine env main)
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
