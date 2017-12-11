@@ -45,3 +45,7 @@ cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
 cp .zshrc ~
 cp. ackrc ~
 cp .rspec ~
+
+# DMGs
+cd ~/Downloads
+curl -O https://download.docker.com/mac/stable/Docker.dmg
