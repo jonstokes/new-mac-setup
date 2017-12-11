@@ -30,6 +30,15 @@ npm install -g aws-sam-local serverless
 # ZSH and oh-my-zsh
 brew install zsh zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+cd ~
+mkdir Local
+mkdir Local/Repositories
+cd Local/Repositories
+git clone https://github.com/jonstokes/new-mac-setup.git
+cd new-mac-setup
+
 mkdir ~/.oh-my-zsh/custom/themes
 cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
 
