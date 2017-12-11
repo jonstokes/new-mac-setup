@@ -35,3 +35,4 @@ cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
 
 cp .zshrc ~
 cp. ackrc ~
+cp .rspec ~
