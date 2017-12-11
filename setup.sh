@@ -9,6 +9,8 @@ brew cask install insomnia
 
 # Storage
 brew install postgres pgcli redis
+brew services start postgresql
+brew services start redis
 
 # Javascript
 brew install node yarn watchman
