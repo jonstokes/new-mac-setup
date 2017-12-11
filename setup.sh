@@ -16,13 +16,6 @@ brew services start redis
 brew install node yarn watchman
 npm -g install babel-cli create-react-app
 
-# ZSH and oh-my-zsh
-brew install zsh zsh-completions
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-mkdir ~/.oh-my-zsh/custom/themes
-cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
-cp .zshrc ~
-
 # RVM and ruby dev stuff
 brew install phantomjs chromedriver
 brew install gnupg
@@ -33,3 +26,10 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 # AWS
 brew install awscli
 npm install -g aws-sam-local serverless
+
+# ZSH and oh-my-zsh
+brew install zsh zsh-completions
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+mkdir ~/.oh-my-zsh/custom/themes
+cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
+cp .zshrc ~
