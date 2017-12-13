@@ -6,6 +6,7 @@
 # Misc
 brew install macvim tmux ack git openssl wget heroku/brew/heroku nmap htop
 brew cask install insomnia
+brew install hub
 
 # Storage
 brew install postgres pgcli redis
@@ -31,6 +32,7 @@ npm install -g aws-sam-local serverless
 brew install zsh zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 cd ~
 mkdir Local

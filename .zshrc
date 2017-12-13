@@ -52,13 +52,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git ruby rails)
+plugins=(git zsh-autosuggestions)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
-
-eval $(docker-machine env main)
 
 # User configuration
 
@@ -68,11 +66,13 @@ eval $(docker-machine env main)
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
