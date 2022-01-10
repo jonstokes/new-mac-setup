@@ -4,9 +4,22 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Misc
-brew install macvim tmux ack git openssl wget heroku/brew/heroku nmap htop
-brew cask install insomnia
-brew install hub
+brew install macvim tmux ack git openssl wget nmap htop
+brew install hub heroku/brew/heroku
+brew install bat fx exa
+
+
+## lsd
+brew install lsd
+### fonts setup
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+
+## fzf
+brew install fzf
+### To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
 
 # Storage
 brew install postgres pgcli redis

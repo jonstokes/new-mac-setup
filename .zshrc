@@ -74,6 +74,8 @@ fi
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -87,4 +89,5 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 #
 
 alias rspec='nocorrect rspec'
-alias ls='ls -aFo'
+alias ls='lsd -la'
+alias cat='bat'
