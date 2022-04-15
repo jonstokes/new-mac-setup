@@ -38,14 +38,17 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 \curl -sSL https://get.rvm.io | bash
 
 # AWS
-brew install awscli
-npm install -g aws-sam-local serverless
+# brew install awscli
+# npm install -g aws-sam-local serverless
 
 # ZSH and oh-my-zsh
 brew install zsh zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+# git config
+git config --global credential.helper osxkeychain
 
 cd ~
 mkdir Local
