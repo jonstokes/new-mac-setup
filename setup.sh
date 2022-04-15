@@ -7,7 +7,7 @@
 brew install macvim tmux ack git openssl wget nmap htop
 brew install hub heroku/brew/heroku
 brew install bat fx exa
-
+brew install httpie
 
 ## lsd
 brew install lsd
