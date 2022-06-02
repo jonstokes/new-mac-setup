@@ -5,15 +5,17 @@
 
 # Misc
 brew install macvim tmux ack git openssl wget nmap htop
-brew install hub heroku/brew/heroku
+#brew install hub heroku/brew/heroku
 brew install bat fx exa
 brew install httpie
 
 ## lsd
 brew install lsd
+
 ### fonts setup
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
+brew install freetype
 
 ## fzf
 brew install fzf
@@ -22,20 +24,29 @@ $(brew --prefix)/opt/fzf/install
 
 
 # Storage
-brew install postgres pgcli redis
+brew install postgres pgcli #redis
 brew services start postgresql
-brew services start redis
+#brew services start redis
 
 # Javascript
 brew install node yarn watchman
-npm -g install babel-cli create-react-app
+#npm -g install babel-cli create-react-app
+
+# Elixir and Go
+brew install gpg gawk
+brew install asdf
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+asdf install elixir latest
+asdf install nodejs latest
 
 # RVM and ruby dev stuff
-brew install phantomjs chromedriver
-brew install gnupg
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+#brew install phantomjs chromedriver
+#brew install gnupg
+#gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
-\curl -sSL https://get.rvm.io | bash
+#\curl -sSL https://get.rvm.io | bash
 
 # AWS
 # brew install awscli
@@ -65,5 +76,5 @@ cp. ackrc ~
 cp .rspec ~
 
 # DMGs
-cd ~/Downloads
-curl -O https://download.docker.com/mac/stable/Docker.dmg
+#cd ~/Downloads
+#curl -O https://download.docker.com/mac/stable/Docker.dmg
