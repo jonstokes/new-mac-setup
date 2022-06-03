@@ -37,8 +37,12 @@ asdf install erlang latest
 asdf install elixir latest
 asdf install nodejs lts
 
-# VSCode
+# GUI apps
 brew install --cask visual-studio-code
+brew install --cask google-chrome
+brew install --cask firefox
+brew install --cask opera
+brew install --cask discord
 
 # ZSH and oh-my-zsh
 brew install zsh zsh-completions
