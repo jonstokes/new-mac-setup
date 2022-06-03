@@ -22,8 +22,9 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install
 
 # Storage
-brew install postgres pgcli #redis
+brew install postgres pgcli
 brew services start postgresql
+#brew install redis
 #brew services start redis
 
 # Elixir and Go
@@ -45,27 +46,25 @@ brew install --cask firefox
 brew install --cask opera
 brew install --cask discord
 
-# ZSH and oh-my-zsh
-brew install zsh zsh-completions
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
 # git config
 git config --global credential.helper osxkeychain
 git config --global user.name "Jon Stokes"
 git config --global user.email "jon@jonstokes.com"
 
-cd ~
-mkdir Local
-mkdir Local/Repositories
-cd Local/Repositories
-git clone https://github.com/jonstokes/new-mac-setup.git
-cd new-mac-setup
+# ZSH and oh-my-zsh
+brew install zsh zsh-completions
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
-cp .zshrc ~
-cp .ackrc ~
+mkdir ~/Local
+mkdir ~/Local/Repositories
+git clone https://github.com/jonstokes/new-mac-setup.git ~/Local/Repositories/new-mac-setup
 
+cp ~/Local/Repositories/new-mac-setup/.zshrc ~
+cp ~/Local/Repositories/new-mac-setup/.ackrc ~
+
+# My custom theme
 mkdir ~/.oh-my-zsh/custom/themes
 cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
 
