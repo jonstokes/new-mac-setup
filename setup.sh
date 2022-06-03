@@ -39,6 +39,7 @@ asdf install nodejs lts
 
 # GUI apps
 brew install --cask visual-studio-code
+brew install --cask iterm2
 brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask opera
