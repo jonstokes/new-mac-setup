@@ -56,17 +56,15 @@ brew install zsh zsh-completions
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+curl -o ~/.zshrc "https://raw.githubusercontent.com/jonstokes/new-mac-setup/master/.zshrc"
+curl -o ~/.ackrc "https://raw.githubusercontent.com/jonstokes/new-mac-setup/master/.ackrc"
 
 mkdir ~/Local
 mkdir ~/Local/Repositories
-git clone https://github.com/jonstokes/new-mac-setup.git ~/Local/Repositories/new-mac-setup
-
-cp ~/Local/Repositories/new-mac-setup/.zshrc ~
-cp ~/Local/Repositories/new-mac-setup/.ackrc ~
 
 # My custom theme
 mkdir ~/.oh-my-zsh/custom/themes
-cp robbyrussell.zsh-theme ~/.oh-my-zsh/custom/themes
+curl -o ~/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme "https://raw.githubusercontent.com/jonstokes/new-mac-setup/master/robbyrussell.zsh-theme"
 
 # DMGs
 #cd ~/Downloads
