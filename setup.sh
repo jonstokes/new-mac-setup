@@ -45,6 +45,7 @@ brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask opera
 brew install --cask discord
+brew install --cask sourcetree
 
 # git config
 git config --global credential.helper osxkeychain
