@@ -60,6 +60,7 @@ brew install --cask discord
 brew install --cask sourcetree
 brew install --cask signal
 brew install --cask telegram
+brew install --cask betterdisplay
 
 # git config
 git config --global credential.helper osxkeychain
