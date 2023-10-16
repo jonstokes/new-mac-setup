@@ -7,12 +7,22 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Misc
 brew install macvim tmux ack git openssl wget nmap htop
-brew install bat fx exa ncp
+brew install bat fx ncp eza
 brew install httpie
 brew install lsd
+brew install jq
+brew install tree
+brew install watch
+brew install zsh-syntax-highlighting
+brew install zsh-autosuggestions
+brew install zsh-completions
+brew install zsh-history-substring-search
+brew install zsh-navigation-tools
+brew install zsh-you-should-use
 
 ### fonts setup
 brew tap homebrew/cask-fonts
+brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
 brew install font-hack-nerd-font
 brew install freetype
 
@@ -38,6 +48,8 @@ asdf install erlang latest
 asdf install elixir latest
 asdf install nodejs lts
 
+brew install --cask livebook
+
 # GUI apps
 brew install --cask visual-studio-code
 brew install --cask iterm2
@@ -53,6 +65,7 @@ brew install --cask telegram
 git config --global credential.helper osxkeychain
 git config --global user.name "Jon Stokes"
 git config --global user.email "jon@jonstokes.com"
+brew install gh
 
 # ZSH and oh-my-zsh
 brew install zsh zsh-completions
