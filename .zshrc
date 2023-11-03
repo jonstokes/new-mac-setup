@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+ZSH_DOTENV_FILE=.envrc
 export ZSH=/Users/jstokes/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -52,10 +53,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git zsh-autosuggestions asdf)
+plugins=(git zsh-autosuggestions asdf ohmyzsh-full-autoupdate dotenv)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+ZSH_DOTENV_FILE=.envrc
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -91,3 +93,4 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 alias rspec='nocorrect rspec'
 alias ls='lsd -la'
 alias cat='bat'
+alias here="open ."
