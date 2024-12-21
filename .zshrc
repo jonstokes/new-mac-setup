@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 ZSH_DOTENV_FILE=.envrc
 export ZSH=/Users/jstokes/.oh-my-zsh
@@ -8,7 +10,7 @@ export ZSH=/Users/jstokes/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jonstokes"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,11 +55,21 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git zsh-autosuggestions asdf ohmyzsh-full-autoupdate dotenv)
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
+source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
+
+
+plugins=(git asdf dotenv)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 ZSH_DOTENV_FILE=.envrc
+
+zstyle ':omz:alpha:lib:git' async-prompt no
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -90,7 +102,18 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 # For a full list of active aliases, run `alias`.
 #
 
-alias rspec='nocorrect rspec'
 alias ls='lsd -la'
 alias cat='bat'
 alias here="open ."
+alias symbolic="elixir --name studio@127.0.0.1 --cookie symbolic-cookie -S mix phx.server"
+alias console="iex --name studio@127.0.0.1 --cookie symbolic-cookie -S mix phx.server"
+alias mainrebase="gl && gcm && git pull && git switch - && grbm"
+alias assets="cd apps/symbolic_web/assets && npm install && gosymbolic"
+alias updates="assets && mix deps.clean --all && mix deps.get && mix ecto.migrate"
+
+# Directories
+alias gorepo="cd ~/Local/Repositories"
+alias gosymbolic="cd ~/Local/Repositories/symbolic/symbolic"
+alias gitrecent="git branch --sort=-committerdate"
+
+export PERPLEXITY_API_KEY="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"
